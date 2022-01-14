@@ -16,7 +16,7 @@ Run
 --------
 
 ```sh
-cd spring-boot-sample
+cd power-plant
 ```
 
 ```sh
