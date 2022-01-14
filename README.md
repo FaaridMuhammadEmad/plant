@@ -21,13 +21,28 @@ Step 1 - Register User
 You need to register the user in order to get the access token OR if your user is already registered, jump to Step 2.
 
 
-Register User
---------
-
-### Path to get the access token
+### Endpoint
 
 ```
  https://power-plant-next-gen.herokuapp.com/api/1.0/user
+```
+
+### Body
+```json
+{
+"email":"faarid@gmail.com",
+"password":"Helloworld123#"
+}
+```
+
+JSON Response:
+
+```json
+{
+    "status": "successful",
+    "message": "User created successfully",
+    "code": 200,
+}
 ```
 
 JSON Response:
