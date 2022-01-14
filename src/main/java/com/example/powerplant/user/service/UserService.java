@@ -73,7 +73,7 @@ public class UserService implements IUserService, UserDetailsService {
 //
 //                        JSONParser parser = new JSONParser();
 //                        JSONObject json = (JSONObject) parser.parse(response.getBody());
-                        message.setMessage("User created successfully").setStatus(ConstantValues.SERVICE_SUCCESS_STATUS).setData(null).setCode(ConstantValues.SERVICE_OK);
+                        message.setMessage("User created successfully").setStatus(ConstantValues.SERVICE_SUCCESS_STATUS).setCode(ConstantValues.SERVICE_OK);
                     }
                 }
             }
