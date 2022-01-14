@@ -82,8 +82,138 @@ You need to signin the user in order to get the access token for user authentica
 }
 ```
 
+Step 3 - Top and Bottom N Plants
+--------
+
+Ability to display top N and bottom N plants in either descending or ascending order by total generation output.
+The value of n will be send in path variable as you can see in the url mentioned below.
+The bearer token is your access token you will get once after successfully getting the response from the Sign in API.
 
 
+### Endpoint
+
+```
+ https://power-plant-next-gen.herokuapp.com/api/1.0/plant/11
+ ```
+
+### Authorization
+```
+Bearer Token: f7afaa62-0680-4881-b974-48e1461be36b
+```
+
+### Response
+
+```
+Two separate lists named topList and bottomLists of the plants
+In top list, the plants will be arranged with the maximum generation output on the first and so on.
+In bottom list, the plants will be arranged with the least generation output on the first and so on.
+```
+
+
+Step 4 - Power Plant By Location
+--------
+
+Ability to filter power plants by location
+The location code will be send in request param (along with the URL) as you can see in the url mentioned below.
+The bearer token is your access token you will get once after successfully getting the response from the Sign in API.
+
+
+### Endpoint
+
+```
+ https://power-plant-next-gen.herokuapp.com/api/1.0/plant?location=AL
+ ```
+
+### Authorization
+```
+Bearer Token: f7afaa62-0680-4881-b974-48e1461be36b
+```
+
+### Response
+
+```
+A list of plants those who have the same location you passed in the url.
+```
+
+
+Step 5 - Paginate Power Plants By Location
+--------
+
+Ability to paginate filtered power plants by location
+The location code will be send in request param.
+The page size and page number will be send in request param (along with the URL) as you can see in the url mentioned below.
+The bearer token is your access token you will get once after successfully getting the response from the Sign in API.
+
+
+### Endpoint
+
+```
+ https://power-plant-next-gen.herokuapp.com/api/1.0/plant/pagination/?location=AK&pageSize=17&pageNumber=2
+ ```
+
+### Authorization
+```
+Bearer Token: f7afaa62-0680-4881-b974-48e1461be36b
+```
+
+### Response
+
+```
+Page containing list of filtered plants by location.
+That page will be containing that number of plants which you passed in page size.
+The page you will be shown is that number which you passed in url.
+```
+
+Step 6 - Details Of Power Plants
+--------
+
+Ability to see details of a single power plant
+The id of the plant will be send in the path variable.
+The bearer token is your access token you will get once after successfully getting the response from the Sign in API.
+
+### Endpoint
+
+```
+ https://power-plant-next-gen.herokuapp.com/api/1.0/plant/details/101
+ ```
+
+### Authorization
+```
+Bearer Token: f7afaa62-0680-4881-b974-48e1461be36b
+```
+
+### Response
+
+```
+Details of the plants having that id.
+```
+
+
+Step 7 - Actual And Percentage Value Of Plants Generation Output
+--------
+
+Show both actual and percentage value of the plants generation output by location
+The location code of the plant will be send in the request param along with the url mentioned below.
+The bearer token is your access token you will get once after successfully getting the response from the Sign in API.
+
+
+### Endpoint
+
+```
+ https://power-plant-next-gen.herokuapp.com/api/1.0/plant/percentage?location=AK
+ ```
+
+### Authorization
+```
+Bearer Token: f7afaa62-0680-4881-b974-48e1461be36b
+```
+
+### Response
+
+```
+List of all the plants of that location with their actual values
+Percentage of the generation output of the plants having same name is displayed along with each list
+```
 
 JSON Response:
 
