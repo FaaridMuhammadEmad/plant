@@ -104,18 +104,18 @@ Bearer Token: f7afaa62-0680-4881-b974-48e1461be36b
 ### Response
 
 ```
-Two separate lists named topList and bottomLists of the plants
-In top list, the plants will be arranged with the maximum generation output on the first and so on.
-In bottom list, the plants will be arranged with the least generation output on the first and so on.
+1. Two separate lists named topList and bottomLists of the plants
+2. In top list, the plants will be arranged with the maximum generation output on the first and so on.
+3. In bottom list, the plants will be arranged with the least generation output on the first and so on.
 ```
 
 
 Step 4 - Power Plant By Location
 --------
 
-Ability to filter power plants by location
-The location code will be send in request param (along with the URL) as you can see in the url mentioned below.
-The bearer token is your access token you will get once after successfully getting the response from the Sign in API.
+1. Ability to filter power plants by location
+2. The location code will be send in request param (along with the URL) as you can see in the url mentioned below.
+3. The bearer token is your access token you will get once after successfully getting the response from the Sign in API.
 
 
 ### Endpoint
@@ -139,10 +139,10 @@ A list of plants those who have the same location you passed in the url.
 Step 5 - Paginate Power Plants By Location
 --------
 
-Ability to paginate filtered power plants by location
-The location code will be send in request param.
-The page size and page number will be send in request param (along with the URL) as you can see in the url mentioned below.
-The bearer token is your access token you will get once after successfully getting the response from the Sign in API.
+1. Ability to paginate filtered power plants by location
+2. The location code will be send in request param.
+3. The page size and page number will be send in request param (along with the URL) as you can see in the url mentioned below.
+4. The bearer token is your access token you will get once after successfully getting the response from the Sign in API.
 
 
 ### Endpoint
@@ -159,17 +159,17 @@ Bearer Token: f7afaa62-0680-4881-b974-48e1461be36b
 ### Response
 
 ```
-Page containing list of filtered plants by location.
-That page will be containing that number of plants which you passed in page size.
-The page you will be shown is that number which you passed in url.
+1. Page containing list of filtered plants by location.
+2. That page will be containing that number of plants which you passed in page size.
+3. The page you will be shown is that number which you passed in url.
 ```
 
 Step 6 - Details Of Power Plants
 --------
 
-Ability to see details of a single power plant
-The id of the plant will be send in the path variable.
-The bearer token is your access token you will get once after successfully getting the response from the Sign in API.
+1. Ability to see details of a single power plant
+2. The id of the plant will be send in the path variable.
+3. The bearer token is your access token you will get once after successfully getting the response from the Sign in API.
 
 ### Endpoint
 
@@ -192,9 +192,9 @@ Details of the plants having that id.
 Step 7 - Actual And Percentage Value Of Plants Generation Output
 --------
 
-Show both actual and percentage value of the plants generation output by location
-The location code of the plant will be send in the request param along with the url mentioned below.
-The bearer token is your access token you will get once after successfully getting the response from the Sign in API.
+1. Show both actual and percentage value of the plants generation output by location
+2. The location code of the plant will be send in the request param along with the url mentioned below.
+3. The bearer token is your access token you will get once after successfully getting the response from the Sign in API.
 
 
 ### Endpoint
@@ -211,8 +211,8 @@ Bearer Token: f7afaa62-0680-4881-b974-48e1461be36b
 ### Response
 
 ```
-List of all the plants of that location with their actual values
-Percentage of the generation output of the plants having same name is displayed along with each list
+1. List of all the plants of that location with their actual values
+2. Percentage of the generation output of the plants having same name is displayed along with each list
 ```
 
 JSON Response:
