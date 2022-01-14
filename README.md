@@ -11,6 +11,9 @@ Clone
 ```sh
 git clone https://github.com/FaaridMuhammadEmad/plant.git
 ```
+Build the project using any tool like IntelliJ
+
+Java 11 is needed to run this project.
 
 Run
 --------
@@ -19,28 +22,27 @@ Run
 cd power-plant
 ```
 
-```sh
-./gradlew bootRun
+Step 1
+--------
+
+```You need to register the user in order to get the access token OR if your user is already registered, jump to Step 2.
 ```
 
-Access
+Register User
 --------
 
 ### Path to get the access token
 
 ```
-http://localhost:8081/oauth/token
+ https://power-plant-next-gen.herokuapp.com/api/1.0/user
 ```
 
 JSON Response:
 
 ```json
 {
-    "access_token": "784aa790-34b5-4a2f-878a-3213ed535ba5",
-    "token_type": "bearer",
-    "refresh_token": "c88489dd-71a0-40d3-8b9d-f8370e50cc9d",
-    "expires_in": 86399,
-    "scope": "read write trust"
+"email":"faarid@gmail.com",
+"password":"Helloworld123#"
 }
 ```
 
