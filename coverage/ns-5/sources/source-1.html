@@ -1,0 +1,116 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > PlantRepository</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+    @import "../../.css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../.js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.powerplant.plant.repository</a>
+</div>
+
+<h1>Coverage Summary for Class: PlantRepository (com.example.powerplant.plant.repository)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+</tr>
+  <tr>
+    <td class="name">PlantRepository$MockitoMock$172331856</td>
+  </tr>
+  <tr>
+    <td class="name">PlantRepository$MockitoMock$172331856$auxiliary$amRFVipF</td>
+  </tr>
+  <tr>
+    <td class="name">PlantRepository$MockitoMock$172331856$auxiliary$XAZLXBrC</td>
+  </tr>
+  <tr>
+    <td class="name">PlantRepository$MockitoMock$172331856$auxiliary$z2C9P3Gf</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package com.example.powerplant.plant.repository;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;
+<i class="no-highlight">4</i>&nbsp;import java.util.HashMap;
+<i class="no-highlight">5</i>&nbsp;import java.util.List;
+<i class="no-highlight">6</i>&nbsp;import java.util.Map;
+<i class="no-highlight">7</i>&nbsp;
+<i class="no-highlight">8</i>&nbsp;import com.example.powerplant.plant.model.Plant;
+<i class="no-highlight">9</i>&nbsp;import org.springframework.cache.annotation.Cacheable;
+<i class="no-highlight">10</i>&nbsp;import org.springframework.data.domain.Page;
+<i class="no-highlight">11</i>&nbsp;import org.springframework.data.domain.Pageable;
+<i class="no-highlight">12</i>&nbsp;import org.springframework.data.jpa.repository.JpaRepository;
+<i class="no-highlight">13</i>&nbsp;import org.springframework.data.jpa.repository.Query;
+<i class="no-highlight">14</i>&nbsp;import org.springframework.data.redis.core.HashOperations;
+<i class="no-highlight">15</i>&nbsp;import org.springframework.data.redis.core.RedisTemplate;
+<i class="no-highlight">16</i>&nbsp;import org.springframework.data.repository.PagingAndSortingRepository;
+<i class="no-highlight">17</i>&nbsp;import org.springframework.stereotype.Repository;
+<i class="no-highlight">18</i>&nbsp;
+<i class="no-highlight">19</i>&nbsp;@Repository
+<i class="no-highlight">20</i>&nbsp;public interface PlantRepository extends JpaRepository&lt;Plant,Long&gt; {
+<i class="no-highlight">21</i>&nbsp;
+<i class="no-highlight">22</i>&nbsp;    Plant findOneById(Long id);
+<i class="no-highlight">23</i>&nbsp;
+<i class="no-highlight">24</i>&nbsp;    Page&lt;Plant&gt; findAllByLocationCode(String location,Pageable pageable);
+<i class="no-highlight">25</i>&nbsp;    Page&lt;Plant&gt; findAllByGenAnnualNetIsNotNull(Pageable topTen);
+<i class="no-highlight">26</i>&nbsp;
+<i class="no-highlight">27</i>&nbsp;    @Query(value=&quot;SELECT * FROM plant where location_code=?1&quot;,nativeQuery = true)
+<i class="no-highlight">28</i>&nbsp;    List&lt;Plant&gt; findAllPlantsByLocationCode(String locationCode);
+<i class="no-highlight">29</i>&nbsp;
+<i class="no-highlight">30</i>&nbsp;    @Query(value=&quot;SELECT SUM(gen_annual_net) FROM plant&quot;,nativeQuery = true)
+<i class="no-highlight">31</i>&nbsp;    Double findSumOfAll();
+<i class="no-highlight">32</i>&nbsp;
+<i class="no-highlight">33</i>&nbsp;    @Query(value = &quot;SELECT SUM(gen_annual_net),plant_name FROM plant where location_code=?1 GROUP BY plant_name&quot;,nativeQuery = true)
+<i class="no-highlight">34</i>&nbsp;    Object[] findSumGroupByName(String locationCode);
+<i class="no-highlight">35</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-01-14 16:45</div>
+</div>
+</body>
+</html>

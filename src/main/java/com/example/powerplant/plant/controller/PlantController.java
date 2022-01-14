@@ -6,6 +6,7 @@ import com.example.powerplant.plant.repository.PlantRepository;
 import com.example.powerplant.plant.service.IPlantService;
 import com.example.powerplant.util.Message;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
