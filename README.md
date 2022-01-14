@@ -1,15 +1,15 @@
-Doma  with Spring Boot
+Plant-Backend  with Spring Boot
 ========================================
 
-This sample shows how easy to integrate [Doma][doma] with  [Spring Boot][spring-boot] .
+This project contains all the apis for getting the power plants mentioned in the test.
 
-Java 8 is needed to run this sample.
+Java 11 is needed to run this project.
 
 Clone
 --------
 
 ```sh
-git clone https://github.com/domaframework/spring-boot-sample.git
+git clone https://github.com/FaaridMuhammadEmad/plant.git
 ```
 
 Run
