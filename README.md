@@ -26,10 +26,10 @@ cd power-plant
 Access
 --------
 
-### Select
+### Path to get the access token
 
 ```
-http://localhost:8080/
+http://localhost:8081/oauth/token
 ```
 
 JSON Response:
