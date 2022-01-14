@@ -15,18 +15,11 @@ Build the project using any tool like IntelliJ
 
 Java 11 is needed to run this project.
 
-Run
+Step 1 - Register User
 --------
 
-```sh
-cd power-plant
-```
+You need to register the user in order to get the access token OR if your user is already registered, jump to Step 2.
 
-Step 1
---------
-
-```You need to register the user in order to get the access token OR if your user is already registered, jump to Step 2.
-```
 
 Register User
 --------
