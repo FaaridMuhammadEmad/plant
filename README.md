@@ -85,9 +85,9 @@ You need to signin the user in order to get the access token for user authentica
 Step 3 - Top and Bottom N Plants
 --------
 
-Ability to display top N and bottom N plants in either descending or ascending order by total generation output.
-The value of n will be send in path variable as you can see in the url mentioned below.
-The bearer token is your access token you will get once after successfully getting the response from the Sign in API.
+1. Ability to display top N and bottom N plants in either descending or ascending order by total generation output.
+2. The value of n will be send in path variable as you can see in the url mentioned below.
+3. The bearer token is your access token you will get once after successfully getting the response from the Sign in API.
 
 
 ### Endpoint
