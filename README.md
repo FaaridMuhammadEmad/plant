@@ -35,7 +35,13 @@ http://localhost:8081/oauth/token
 JSON Response:
 
 ```json
-[{"id":1,"name":"Tokyo"},{"id":2,"name":"New York"},{"id":3,"name":"London"}]
+{
+    "access_token": "784aa790-34b5-4a2f-878a-3213ed535ba5",
+    "token_type": "bearer",
+    "refresh_token": "c88489dd-71a0-40d3-8b9d-f8370e50cc9d",
+    "expires_in": 86399,
+    "scope": "read write trust"
+}
 ```
 
 ### Update
