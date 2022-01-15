@@ -218,21 +218,24 @@ Bearer Token: f7afaa62-0680-4881-b974-48e1461be36b
 Step 8 - Run Unit Test Case
 --------
 
+```
 1. Go to the IntelliJ
 2. Open test folder and right click on java folder
 3. Run All Test
 4. Moreover, in the root folder, go to coverage folder and open index.html
 5. Click on plant.service and you can review the lines of code and percentage of code that has been covered in the Plant's Service.
 6. Mockito has been integrated for unit testing
-
+```
 
 Step 9 - Run Docker Image Container
 --------
 
+```
 1. A Dockerfile has been created in the root directory
 2. After building the JAR file, it has been converted into a Docker container
 3. The docker container has been pushed to a repository at Docker Hub
 4. To clone, and run the docker container from that repository, copy paste the following command
+```
 
 ### Command
 
