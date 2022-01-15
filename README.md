@@ -1,11 +1,11 @@
-Plant-Backend  with Spring Boot
+Getting Started
 ========================================
 
 This project contains all the apis for getting the power plants mentioned in the test.
 
 Java 11 is needed to run this project.
 
-Clone
+Clone by Github Repository
 --------
 
 ```sh
@@ -45,10 +45,10 @@ You need to register the user in order to get the access token OR if your user i
 }
 ```
 
-Step 2 - Signin User
+Step 2 - Sign in User
 --------
 
-You need to signin the user in order to get the access token for user authentication.
+You need to sign in the user in order to get the access token for user authentication.
 
 
 ### Endpoint
@@ -244,7 +244,7 @@ Use Eclipse 4.4 or above.
 Generate all Eclipse files with Gradle.
 
 ```sh
-./gradlew eclipse
+https://power-plant-next-gen.herokuapp.com/swagger-ui/index.html
 ```
 
 License
