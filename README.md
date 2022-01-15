@@ -244,7 +244,7 @@ Use Eclipse 4.4 or above.
 Generate all Eclipse files with Gradle.
 
 ```sh
-./gradlew eclipse
+https://power-plant-next-gen.herokuapp.com/swagger-ui/index.html
 ```
 
 License
