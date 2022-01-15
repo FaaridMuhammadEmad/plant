@@ -28,7 +28,6 @@ public class WebConfig implements WebMvcConfigurer {
                 .build();
     }
 
-
     @Override
     public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
         configurer

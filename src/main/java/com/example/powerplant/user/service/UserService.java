@@ -5,7 +5,6 @@ import com.example.powerplant.user.dto.RegisterUserDto;
 import com.example.powerplant.user.model.User;
 import com.example.powerplant.user.repository.UserRepository;
 import com.example.powerplant.util.Message;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -59,20 +58,7 @@ public class UserService implements IUserService, UserDetailsService {
                             user.setPassword(hash);
                         }
                         user.setEmail(userDTO.getEmail());
-
                         userRepository.save(user);
-
-//                        HttpResponse<String> response = Unirest.post("http://localhost:8081/oauth/token")
-//                                .header("authorization", "Basic c29jb2w6c2VjcmV0")
-//                                .header("cache-control", "no-cache")
-//                                .header("postman-token", "cad8d1b7-19cd-5682-25c1-a8c4bee73228")
-//                                .field("grant_type", "password")
-//                                .field("username", userDTO.getEmail())
-//                                .field("password", userDTO.getPassword())
-//                                .asString();
-//
-//                        JSONParser parser = new JSONParser();
-//                        JSONObject json = (JSONObject) parser.parse(response.getBody());
                         message.setMessage("User created successfully").setStatus(ConstantValues.SERVICE_SUCCESS_STATUS).setCode(ConstantValues.SERVICE_OK);
                     }
                 }

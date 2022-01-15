@@ -40,5 +40,4 @@ public class Plant {
 
     @Column
     private Double genAnnualNet;
-
 }

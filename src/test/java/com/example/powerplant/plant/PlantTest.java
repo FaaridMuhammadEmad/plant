@@ -1,10 +1,8 @@
 package com.example.powerplant.plant;
 
 import com.example.powerplant.objectFactoryUtils.ObjectFactoryUtil;
-import com.example.powerplant.plant.model.Plant;
 import com.example.powerplant.plant.repository.PlantRepository;
-import com.example.powerplant.plant.service.PlantService;
-import com.example.powerplant.user.model.User;
+import com.example.powerplant.plant.service.implementation.PlantServiceImpl;
 import com.example.powerplant.user.repository.UserRepository;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
@@ -12,7 +10,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.data.domain.Page;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.IOException;
@@ -26,7 +23,7 @@ import static org.mockito.Mockito.when;
 public class PlantTest {
 
     @Autowired
-    PlantService plantService;
+    PlantServiceImpl plantService;
 
     @MockBean
     PlantRepository plantRepository;
@@ -187,5 +184,4 @@ public class PlantTest {
         when(plantRepository.findSumOfAll()).thenReturn(ObjectFactoryUtil.sum);
         assertEquals(400, plantService.getActualAndPercentageValues(()->ObjectFactoryUtil.validEmail,null).getCode());
     }
-
 }

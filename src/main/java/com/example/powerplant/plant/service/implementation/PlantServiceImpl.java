@@ -1,9 +1,10 @@
-package com.example.powerplant.plant.service;
+package com.example.powerplant.plant.service.implementation;
 
 import com.example.powerplant.global.ConstantValues;
 import com.example.powerplant.plant.dto.TopBottomListDto;
 import com.example.powerplant.plant.model.Plant;
 import com.example.powerplant.plant.repository.PlantRepository;
+import com.example.powerplant.plant.service.IPlantService;
 import com.example.powerplant.user.model.User;
 import com.example.powerplant.user.repository.UserRepository;
 import com.example.powerplant.util.Message;
@@ -11,27 +12,18 @@ import com.nimbusds.jose.shaded.json.JSONArray;
 import com.nimbusds.jose.shaded.json.JSONObject;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration;
-import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.Cacheable;
-import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.context.annotation.Import;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.security.Principal;
 
 @Service
-public class PlantService implements IPlantService {
+public class PlantServiceImpl implements IPlantService {
     @Autowired
     PlantRepository plantRepository;
 
@@ -88,8 +80,6 @@ public class PlantService implements IPlantService {
             message.setCode(ConstantValues.SERVICE_INTERNAL_SERVER).setStatus(ConstantValues.SERVICE_UNSUCCESS_STATUS).setMessage("Something went wrong");
         }
         return message;
-
-
     }
 
     @Override
@@ -148,8 +138,8 @@ public class PlantService implements IPlantService {
     @Override
     public Message getActualAndPercentageValues(Principal principal, String locationCode) throws IOException {
         Message message = new Message();
-        try{
-            if (principal != null && locationCode!=null) {
+        try {
+            if (principal != null && locationCode != null) {
                 User user = userRepository.findOneByEmail(principal.getName());
                 if (user != null) {
                     ObjectMapper objectMapper = new ObjectMapper();
@@ -183,11 +173,10 @@ public class PlantService implements IPlantService {
                 } else {
                     message.setCode(ConstantValues.SERVICE_UNAUTHORIZED).setStatus(ConstantValues.SERVICE_UNSUCCESS_STATUS).setMessage("User unauthorized");
                 }
-            }
-                else{
+            } else {
                 message.setCode(ConstantValues.SERVICE_BAD_REQUEST).setStatus(ConstantValues.SERVICE_UNSUCCESS_STATUS).setMessage("Please enter valid inputs");
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             message.setCode(ConstantValues.SERVICE_INTERNAL_SERVER).setStatus(ConstantValues.SERVICE_UNSUCCESS_STATUS).setMessage("Something went wrong");
         }

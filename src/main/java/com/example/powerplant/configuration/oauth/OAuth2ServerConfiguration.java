@@ -68,18 +68,9 @@ public class OAuth2ServerConfiguration {
                     .disable ()
                     .and ()
                     .authorizeRequests ()
-                    .antMatchers ("/home", "/api/1.0/user/register/**", "/login", "/test", "/api/1.0/user/forget/password", "/api/1.0/user/pin/verification").permitAll ()
-                    .antMatchers ("/api/1.0/public/user/register", "/api/1.0/public/user/verify", "/api/1.0/public/user/resend/registration/pin").permitAll ()
-                    .antMatchers ("/api/1.0/user/reset/password/**").permitAll ()
-                    .antMatchers("/forget/password").permitAll()
-                    .antMatchers("/verify/pin/**").permitAll()
-                    .antMatchers ("/test/cut").permitAll ()
-                    .antMatchers("/v2/**").permitAll()
-                    .antMatchers("/api/**").permitAll()
-                    .antMatchers ("/api/1.0/user/get/organisations").permitAll ()
+                    .antMatchers ( "/api/1.0/user", "/login").permitAll ()
                     .antMatchers("/swagger-ui/**").permitAll()
                     .antMatchers("/swagger-ui.html/**").permitAll()
-                    .antMatchers ("/**").permitAll ()
                     .antMatchers ("/**").authenticated ();
         }
     }
