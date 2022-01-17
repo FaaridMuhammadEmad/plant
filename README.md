@@ -251,42 +251,4 @@ Step 9 - Swagger Documentation
 ```
 https://power-plant-next-gen.herokuapp.com/swagger-ui/index.html
 ```
-JSON Response:
 
-```json
-{
-"email":"faarid@gmail.com",
-"password":"Helloworld123#"
-}
-```
-
-### Update
-
-```
-http://localhost:8080/update?name=Kyoto
-```
-
-JSON Response:
-
-```json
-[{"id":1,"name":"Kyoto"},{"id":2,"name":"New York"},{"id":3,"name":"London"}]
-```
-
-Edit
---------
-
-Use Eclipse 4.4 or above.
-
-Generate all Eclipse files with Gradle.
-
-```sh
-https://power-plant-next-gen.herokuapp.com/swagger-ui/index.html
-```
-
-License
--------
-
-Apache License, Version 2.0
-
-[doma]: https://github.com/domaframework/doma
-[spring-boot]: https://github.com/spring-projects/spring-boot
