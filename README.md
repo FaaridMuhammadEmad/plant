@@ -5,6 +5,8 @@ This project contains all the apis for getting the power plants mentioned in the
 
 Java 11 is needed to run this project.
 
+Application has been deployed to Heroku (free tier) so it will take sometime for the first hit of the API, and then will work eventually with less time from second hit onwards.
+
 Clone by Github Repository
 --------
 
